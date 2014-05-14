@@ -1,0 +1,25 @@
+extends layout
+
+block content
+ div.wrapper
+  div.content
+   h1(align="center") IS-217 Data Visualization
+   h3(align="center", style=("color:red")) Click through the Navigation Bar to view Data Maps of Google User Data Requests per Country
+  br    
+  div.container
+    div.content
+      table.table
+        thead
+          tr
+            th PeriodEnding
+            th Country
+            th Territory Code
+            th Legal
+            th User Data Requests
+            th Percentage Requests w/ Data Produced
+            th User/Accounts Specified
+        tbody(id="tableData")
+      
+    div(id="stuff")
+ 
+  div.footer

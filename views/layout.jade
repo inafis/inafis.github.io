@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/js/jquery-1.11.0.min.js')
+    script(src='/js/tableUpdate.js')
+    script(src='/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/css/ammap.css')
+    script(type='text/javascript', src='/lib/ammap.js')
+    script(type='text/javascript', src='/lib/maps/js/worldLow.js')
+    script(type='text/javascript', src='/lib/dark.js')
+
+    
+  body
+  .navbar.navbar-default.navbar-static-top(role='navigation')
+      .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              - var obj = {'/':'Home','chart09':'Map for 2009','chart10':'Map for 2010','chart11':'Map for 2011','chart12':'Map for 2012','chart13':'Map for 2013', 'about':'About', }
+                - each val, key in obj
+                  - if (id == key)
+                    li.active
+                      a(href='#{key}') #{val}
+                  - else            
+                    li
+                      a(href='#{key}') #{val}
+    block content

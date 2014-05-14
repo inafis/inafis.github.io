@@ -1,0 +1,21 @@
+extends layout
+
+block content
+ script(type='text/javascript', src='js/chartData13.js')
+ h1(align="center") Map Data From 2013
+ br
+ div(id="mapdiv", style='width: 100%; height:600px;')
+ br
+ div.container
+    div.content
+      table.table
+        thead
+          tr
+            th PeriodEnding
+            th Country
+            th Territory Code
+            th Legal
+            th User Data Requests
+            th Percentage Requests w/ Data Produced
+            th User/Accounts Specified
+        tbody(id="tableData13")
